@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  min-height: 100vh; /* 画面の高さいっぱいまで広げる */
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-grow: 1; /* 残りのスペースを全て占有する */
+}
+
+.container {
+  flex-grow: 1;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+header {
+  height: 80px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 要素を左右に配置 */
+  padding: 0 20px;
+}
+
+.header-title {
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+}
+
+.search-form {
+  flex-grow: 1; /* 残りのスペースを埋める */
+  max-width: 500px; /* フォームの最大幅を設定して、中央に寄せる */
+  margin: 0 auto; /* 左右の余白を自動で調整して中央揃え */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+}
+
+.search-form input {
+  height: 45px;
+  padding: 5px 15px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  font-size: 1em;
+  outline: none;
+}
+
+.search-form input::placeholder {
+  color: #777777;
+}
+
+.search-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-form button::after {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%23777777%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.header-buttons {
+  /* 左側の余白を自動で最大化し、要素を右端に寄せる */
+  margin-left: auto;
+  display: flex;
+  gap: 0px;
+}
+
+.header-button {
+  display: flex; /* ← flex化 */
+  align-items: center; /* ← 垂直中央 */
+  justify-content: center; /* ← 水平中央 */
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  background-color: gray;
+  color: white;
+  font-size: 16px;
+  text-decoration: none; /* 下線を消す */
+  border: none;
+  cursor: pointer;
+}
+
+.header-button:hover {
+  background-color: darkgray;
+}
+
+.header-profile {
+  display: flex; /* ← flex化 */
+  align-items: center; /* ← 垂直中央 */
+  justify-content: center; /* ← 水平中央 */
+  text-align: center;
+  width: 200px;
+  height: 80px;
+  background-color: gray;
+  color: white;
+  font-size: 16px;
+  text-decoration: none; /* 下線を消す */
+  border: none;
+  cursor: pointer;
+}
+
+.header-profile:hover {
+  background-color: darkgray;
+}
+
+.sidebar {
+  width: 240px;
+  height: 740px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sidebar-button {
+  border: none;
+  text-align: center;
+  width: 240px;
+  background-color: gray;
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+
+.sidebar-button:hover {
+  background-color: darkgray;
+}
+
+.sidebar-button-pointed {
+  border: none;
+  text-align: center;
+  width: 240px;
+  background-color: darkgray;
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
